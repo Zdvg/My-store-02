@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(./styles/reset.css);
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+
+.products--grid {
+  app-img {
+    img {
+      border-radius: 20px;
+      max-height: 200px;
+    }
+  }
+}

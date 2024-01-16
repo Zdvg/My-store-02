@@ -1,0 +1,35 @@
+<button class="btn-mas" (click)="createNewProduct()">Crear nuevo producto</button>
+<!--<p>Cantidad {{myShoppingCart.length}}</p>
+<p>Total: ${{total}}</p>
+<p>Today: {{ today | date: 'shor<t'}}</p>
+<p>Today: {{ today | timeAgo}}</p>-->
+<div class="products--grid">
+  <app-product
+  [product]="product"
+  *ngFor="let product of products"
+  (addedProduct)="onAddToShoppingCart($event)"
+  (showProduct)="onShowDetailsProduct($event)"
+  ></app-product>
+</div>
+<div class="ultima-div-pantalla">
+  <button class="btn-mas" (click)="onLoadMore()">Mas</button>
+</div>
+
+<div class="product-detail" [class.active]="showProductsDetail">
+  <div *ngIf="productChosen">
+    <h1>{{productChosen.title}}</h1>
+    <button (click)="toggleProductDetail()">Cerrar</button>
+    <button (click)="updateProduct()">Editar</button>
+    <button (click)="deleteProduct()">Eliminar</button>
+    <p>{{productChosen.description}}</p>
+
+    <swiper
+    [slidesPerView]="1">
+    <ng-template swiperSlide *ngFor="let img of productChosen.images">
+        <img [src]="img" [alt]="">
+    </ng-template>
+    </swiper>
+
+  </div>
+</div>
+

@@ -1,0 +1,35 @@
+.btn-createUser, .btn-login {
+  text-decoration: none;
+  display:inline-block;
+  width:50%;
+  padding:5px;
+  background: #ACD9B2;
+  width:10%;
+  text-align: center;
+  color:white;
+  font-size: 10px;
+  font-weight: bold;
+  transition: all 0.9s ease;
+  box-shadow: -5px 1px 3px 0px #cdaae2;
+  border-radius: 10px 30px;
+}
+
+.btn-login:hover{
+
+  background: rgb(182, 187, 182);
+  color:rgb(126, 126, 126);
+  box-shadow:none;
+  border-radius: 10px;
+
+}
+
+.btn-createUser:hover{
+
+  background: rgb(182, 187, 182);
+  color:rgb(126, 126, 126);
+  box-shadow:none;
+  border-radius: 10px;
+
+}
+
+
